@@ -36,12 +36,12 @@ def get_plate_type(plate):
     regex_2 = r"[авекмнорстух]{2}\d{4}\s\d{2}"
     regex_3 = r"\d{4}[авекмнорстух]{2}\s\d{2}"
     if re.match(regex_1A,plate):
-        return "Данный гос номер пренадлежит типу 1А."
+        return "1А"
     elif re.match(regex_1B,plate):
-        return "Данный гос номер пренадлежит типу 1Б."
+        return "1Б"
     elif re.match(regex_2,plate):
-        return "Данный гос номер пренадлежит типу 2."
+        return "2"
     elif re.match(regex_3,plate):
-        return "Данный гос номер пренадлежит типу 3."
+        return "3"
     else:
       return "Fail!"

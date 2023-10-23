@@ -30,7 +30,7 @@ _REPL_0 = r"\1\1"  # строка замены
 # aZZc  ---> a!Z!!Z!c
 # aBaCa ---> a!B!a!C!a
 PATTERN_1 = r"([a-zA-z])"
-REPL_1 = r"\1!"
+REPL_1 = r"!\1!"
 
 
 # abc    ---> abc
