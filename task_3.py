@@ -33,5 +33,19 @@ import re
 
 def format_phone_number(text):
     # ваше решение:
+    regex_1 = r"[+]7\s\d{3}\s\d{3}-\d{2}-\d{2}"
+    regex_2 = r"8\(\d{3}\)\d{3}-\d{2}-\d{2}"
+    regex_3 = r"\d{10}"
 
-    return "Fail!"
+    if re.match(regex_1,text):
+        return text
+    elif re.match(regex_2,text):
+        digital = "".join(re.findall(r"\d",text))
+        return "+7 {} {}-{}-{}".format(digital[1:4],digital[4:7],digital[7:9],digital[9:])
+    elif re.match(regex_3,text):
+        return "+7 {} {}-{}-{}".format(text[0:3],text[3:6],text[6:8],text[8:])
+    else:
+        return "Fail!"
+    
+phone = input()
+print(format_phone_number(phone))

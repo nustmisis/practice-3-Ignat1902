@@ -29,8 +29,22 @@ get_plate_type!
 
 import re
 
+state_number = input('Введите гос. номер: ') 
 
 def get_plate_type(plate):
-    # ваше решение:
-
-    return "Fail!"
+    
+    regex_1A = r"[авекмнорстух]\d{3}[авекмнорстух]{2}\s\d{2}"
+    regex_1B = r"[авекмнорстух]{2}\d{3}\s\d{2}"
+    regex_2 = r"[авекмнорстух]{2}\d{4}\s\d{2}"
+    regex_3 = r"\d{4}[авекмнорстух]{2}\s\d{2}"
+    if re.match(regex_1A,plate):
+        return "Данный гос номер пренадлежит типу 1А."
+    elif re.match(regex_1B,plate):
+        return "Данный гос номер пренадлежит типу 1Б."
+    elif re.match(regex_2,plate):
+        return "Данный гос номер пренадлежит типу 2."
+    elif re.match(regex_3,plate):
+        return "Данный гос номер пренадлежит типу 3."
+    else:
+      return "Fail!"
+print(get_plate_type(state_number))
