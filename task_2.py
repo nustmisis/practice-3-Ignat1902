@@ -29,8 +29,6 @@ get_plate_type!
 
 import re
 
-state_number = input('Введите гос. номер: ') 
-
 def get_plate_type(plate):
     
     regex_1A = r"[авекмнорстух]\d{3}[авекмнорстух]{2}\s\d{2}"
@@ -47,4 +45,3 @@ def get_plate_type(plate):
         return "Данный гос номер пренадлежит типу 3."
     else:
       return "Fail!"
-print(get_plate_type(state_number))

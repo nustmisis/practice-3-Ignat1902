@@ -46,6 +46,3 @@ def format_phone_number(text):
         return "+7 {} {}-{}-{}".format(text[0:3],text[3:6],text[6:8],text[8:])
     else:
         return "Fail!"
-    
-phone = input()
-print(format_phone_number(phone))
