@@ -35,25 +35,25 @@ REGEXP_2 = r"[a-z0-9]{3}"
 # a aa aaa ---> aa, aaa
 # b bb bbb ---> bb, bbb
 # a bb aaa ---> bb, aaa
-REGEXP_3 = "[a-z]{2,3}"
+REGEXP_3 = r"[a-z]{2,3}"
 
 # 1.1.1.1 aaaa bbbbb      ---> 1.1.1.1
 # a.a.a.a bbbb 2.2.2.2    ---> 2.2.2.2
 # 3.3.3.3 cccc 4.4.4.4    ---> 3.3.3.3, 4.4.4.4
 # 255.23.0.1 cccc 4.4.4.4 ---> 255.23.0.1, 4.4.4.4
 # 255.0.23.1 cccc 4.4.4.4 ---> 255.0.23.1, 4.4.4.4
-REGEXP_4 = "\d+\.\d+\.\d+\.\d+"
+REGEXP_4 = r"\d+\.\d+\.\d+\.\d+"
 
 # aaa Abbb ccc ---> Abbb
 # Aaa Abbb ccc ---> Aaa, Abbb
 # Caa Cbb Accc ---> Accc
-REGEXP_5 = "A[a-z]{2,3}"
+REGEXP_5 = r"A[a-z]{2,3}"
 
 # a b c d e f ---> a, b, e, f
 # abcdef      ---> a, b, e, f
 # adf         ---> a, f
 # acf         ---> a, f
-REGEXP_6 = "[abef]"
+REGEXP_6 = r"[abef]"
 
 # aaa +1.0 bb              ---> +1.0
 # aaa -1.0 bb              ---> -1.0
@@ -65,4 +65,4 @@ REGEXP_7 = r"[-+]\d+.\d*"
 # aaa 18-04-ABCD bbb 18.04.2016 ---> 18.04.2016
 # aaa 18/04/ABCD bbb 18/04/2016 ---> 18/04/2016
 # aaa 18/04/ABCD bbb 18/4/2016  ---> 18/4/2016
-REGEXP_8 = r"\d{2}([./-])\d{,2}\1\d{4}"
+REGEXP_8 = r"\d{1,2}[.\-/]\d{1,2}[.\-/]\d{4}"
