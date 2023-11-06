@@ -42,7 +42,7 @@ REGEXP_3 = r"\w{2,}"
 # 3.3.3.3 cccc 4.4.4.4    ---> 3.3.3.3, 4.4.4.4
 # 255.23.0.1 cccc 4.4.4.4 ---> 255.23.0.1, 4.4.4.4
 # 255.0.23.1 cccc 4.4.4.4 ---> 255.0.23.1, 4.4.4.4
-REGEXP_4 = r"\d+[.]"
+REGEXP_4 = r"\d+\.\d+\.\d+\.\d+"
 
 # aaa Abbb ccc ---> Abbb
 # Aaa Abbb ccc ---> Aaa, Abbb
@@ -53,7 +53,7 @@ REGEXP_5 = r"\b[A-Z][a-z]*"
 # abcdef      ---> a, b, e, f
 # adf         ---> a, f
 # acf         ---> a, f
-REGEXP_6 = r"\w"
+REGEXP_6 = r"[abef]"
 
 # aaa +1.0 bb              ---> +1.0
 # aaa -1.0 bb              ---> -1.0
